@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>اسلام اور سائنس — کورس ویب سائٹ</title>
+<meta name="description" content="اسلام اور سائنس کورس: سلیبس، مضامین، سوالات و جوابات اور کثیرالانتخابی سوالات" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand"><span class="dot"></span> اسلام اور سائنس</div>
+    <button class="hamburger" id="hamburger" aria-label="مینو">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav" id="mainNav">
+      <a href="#/home" data-route="home">ہوم</a>
+      <a href="#/syllabus" data-route="syllabus">سلیبس</a>
+      <a href="#/articles" data-route="articles">مضامین</a>
+      <a href="#/qa" data-route="qa">سوالات و جوابات</a>
+      <a href="#/mcq" data-route="mcq">کثیرالانتخابی سوالات</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ================= HOME ================= -->
+  <section class="page" id="page-home">
+    <div class="hero">
+      <h1>اسلام اور سائنس</h1>
+      <p>ایک مکمل تعلیمی کورس — 15 موضوعات پر مبنی جامع مضامین، مختصر سوالات و جوابات، اور کثیرالانتخابی امتحانی سوالات، سب ایک ہی جگہ۔</p>
+    </div>
+    <div class="card-grid">
+      <a class="big-card card-syllabus" href="#/syllabus">
+        <span class="icon">📋</span>
+        <h3>سلیبس</h3>
+        <p>تمام 15 موضوعات کی مکمل فہرست، ترتیب کے ساتھ</p>
+      </a>
+      <a class="big-card card-articles" href="#/articles">
+        <span class="icon">📖</span>
+        <h3>مضامین</h3>
+        <p>ہر موضوع پر مکمل، تفصیلی اور علمی مضمون</p>
+      </a>
+      <a class="big-card card-qa" href="#/qa">
+        <span class="icon">💬</span>
+        <h3>سوالات و جوابات</h3>
+        <p>ہر موضوع کے کلیدی نکات، مختصر سوال و جواب کی صورت میں</p>
+      </a>
+      <a class="big-card card-mcq" href="#/mcq">
+        <span class="icon">✅</span>
+        <h3>کثیرالانتخابی سوالات</h3>
+        <p>معلوماتی طرز کے MCQs، فوری خود جانچ کے لیے</p>
+      </a>
+    </div>
+    <div class="home-note">
+      یہ کورس اسلامی علمی روایت اور جدید سائنس کے تعلق کو آسان، جامع اور علمی انداز میں پیش کرتا ہے۔ ہر سیکشن پچھلے سیکشن سے مختلف زاویے سے موضوع کا احاطہ کرتا ہے تاکہ سیکھنے کا عمل مکمل اور بھرپور ہو۔
+    </div>
+  </section>
+
+  <!-- ================= SYLLABUS ================= -->
+  <section class="page" id="page-syllabus">
+    <h2 class="page-title">سلیبس — موضوعات کی فہرست</h2>
+    <p class="page-sub">درج ذیل 15 موضوعات اس کورس کا مکمل نصاب ہیں۔ ہر موضوع کے سامنے اس کے مضمون، سوالات و جوابات، اور کثیرالانتخابی سوالات تک براہ راست رسائی کے بٹن دیے گئے ہیں۔</p>
+    <div class="syllabus-list" id="syllabusList"></div>
+  </section>
+
+  <!-- ================= ARTICLES ================= -->
+  <section class="page" id="page-articles">
+    <h2 class="page-title">مضامین</h2>
+    <p class="page-sub">ہر موضوع پر مکمل اور جامع مضمون — قرآنی آیات، دلائل اور تفصیلی وضاحت کے ساتھ۔</p>
+    <select class="topic-select-mobile" id="articlesSelect"></select>
+    <div class="topic-layout">
+      <div class="topic-sidebar" id="articlesSidebar"></div>
+      <div class="content-pane" id="articlesContent"></div>
+    </div>
+  </section>
+
+  <!-- ================= QA ================= -->
+  <section class="page" id="page-qa">
+    <h2 class="page-title">سوالات و جوابات</h2>
+    <p class="page-sub">ہر موضوع کے کلیدی نکات مختصر سوال و جواب کی صورت میں — مکمل پیراگراف پر مبنی جوابات کے ساتھ۔</p>
+    <select class="topic-select-mobile" id="qaSelect"></select>
+    <div class="topic-layout">
+      <div class="topic-sidebar" id="qaSidebar"></div>
+      <div class="content-pane">
+        <div class="qa-toolbar"><button id="qaToggleAll">سب کھولیں</button></div>
+        <div id="qaContent"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MCQ ================= -->
+  <section class="page" id="page-mcq">
+    <h2 class="page-title">کثیرالانتخابی سوالات</h2>
+    <p class="page-sub">ہر سوال پر کلک کر کے اپنا جواب چیک کریں۔ یہ سوالات مضامین اور سوالات و جوابات سے مختلف پہلوؤں کا احاطہ کرتے ہیں۔</p>
+    <select class="topic-select-mobile" id="mcqSelect"></select>
+    <div class="topic-layout">
+      <div class="topic-sidebar" id="mcqSidebar"></div>
+      <div class="content-pane">
+        <div class="mcq-toolbar">
+          <span class="mcq-score" id="mcqScore">سکور: 0 / 0</span>
+          <button id="mcqReset">دوبارہ شروع کریں</button>
+        </div>
+        <div id="mcqContent"></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  اسلام اور سائنس — تعلیمی کورس ویب سائٹ
+</footer>
+
+<script src="data/content.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
